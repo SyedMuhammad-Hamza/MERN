@@ -1,0 +1,7 @@
+npm create vite@latest my-project -- --template react
+npm i
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm i formik
+npm i react-toastify
+npm i yup

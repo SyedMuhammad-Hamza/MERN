@@ -1,0 +1,21 @@
+  /* To use CSS Modules, the CSS file name must end with .module.css 
+  This is what CSS Modules does: It automatically generates unique class names. As long as you use CSS Modules, you don’t have to worry about class name collisions.
+ CSS Modules are extracted from the JavaScript bundles at build time and generate .css files that are loaded automatically by Next.js
+ In Next.js, you can add global CSS files by importing them from pages/_app.js. You cannot import global CSS anywhere else.
+ */
+
+ .container {
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .backToHome {
+    margin: 3rem 0 0;
+  }

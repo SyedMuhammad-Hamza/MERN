@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const CreateBook = () => {
   const [title, settitle] = useState("");
@@ -15,7 +15,7 @@ const CreateBook = () => {
       .post("http://localhost:5554/books", data)
       .then(() => {
         console.log("success Alhumdulillah.");
-        navigate('/');
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
@@ -24,7 +24,7 @@ const CreateBook = () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl my-4">Craete Book</h1>
-      <Link to='/'>Show Book's List</Link>
+      <Link to="/">Show Book's List</Link>
       <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
         <div className="my-4">
           <label className="text-xl mr-4 text-gray-500">User Id</label>

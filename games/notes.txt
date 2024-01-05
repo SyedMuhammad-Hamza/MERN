@@ -1,0 +1,5 @@
+npx create-react-app . (frontend)
+npm i react-router-dom
+ npm install -D tailwindcss
+npm init (backend)
+npm install express (backend)

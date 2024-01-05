@@ -2,10 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
-const Login = () => {
+const Login = ({ toggleisLoggedin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -22,6 +21,10 @@ const Login = () => {
       toast.success("Successfully logged in Alhumdulillah !", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      console.log(res.data.accessToken);
+      localStorage.setItem("accessToken", res.data.accessToken);
+      toggleisLoggedin();
+      navigate("/home");
     } catch (error) {
       toast.error("Wrong input!", {
         position: toast.POSITION.BOTTOM_RIGHT,
@@ -102,7 +105,6 @@ const Login = () => {
               >
                 Sign in
               </button>
-              <ToastContainer />
             </div>
           </form>
 
